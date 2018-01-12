@@ -1,5 +1,5 @@
 # :hospital: Doctor Lookup :hospital:
-January 12, 2018. Amy Churchwell. Epicodus Student.
+#### January 12, 2018. Amy Churchwell. Epicodus Student.
 
 A website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue.
 
@@ -41,7 +41,7 @@ This project utilizes mostly JavaScript with some ES6 flavor! Whoop.
 
 _A reference for a forgetful student._
 
-- [x] A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
+- [  ] A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
 
 - [x] A user should be able to to enter a name to receive a list of doctors in the Portland area that fit the search query.
 
@@ -58,3 +58,7 @@ _A reference for a forgetful student._
 - [x] Use at least two JavaScript files: One to receive form input and another to make an API request and display results.
 
 - [x] This example assumes your API Key is stored in an apiKey variable, as described in this lesson. In order to make your applications quick to grade, please follow the example exactly and do not rename your apiKey variable to something different.
+
+## Contact
+
+If you have any feedback (good or bad!) feel free to shoot me an email at amy.churchwell@gmail.com

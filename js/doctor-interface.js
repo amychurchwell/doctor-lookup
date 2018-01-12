@@ -8,8 +8,21 @@ $(document).ready(function() {
     const name = $('#name-input').val();
     const symptom = $('#symptom-input').val();
     $('#name-input').val("");
+    $('#symptom-input').val("");
     $('#results').empty();
-    getDr(name, apiKey, function(response) {
+
+    const symptomInput = document.getElementById('symptom-input');
+    const nameInput = document.getElementById('name-input');
+
+    if (symptomInput && symptomInput.value){
+      let lookFor = "query";
+    }else if (nameInput && nameInput.value){
+      let lookFor = "last_name";
+    }else{
+      return "Please enter a value.";
+    }
+
+    getDr(name, lookFor, apiKey, function(response) {
       let length = `${response.meta.count}`;
       $('#results').append(`<h3><small class="text-muted">You received: ${response.meta.count} results.</small></h3><br>`);
       counter(response, length);
@@ -19,4 +32,5 @@ $(document).ready(function() {
   });
 });
 
+//last_name
 //query
