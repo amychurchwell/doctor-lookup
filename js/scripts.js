@@ -16,21 +16,4 @@ export function getData(search, apiKey, yes, no){
         no();
       }
     });
-
-    if (search === undefined){
-      alert('THIS THING DOESNT WORK FIX LATER');
-    }
   }
-
-export function counter(){
-  var cars = ["BMW", "Volvo", "Saab", "Ford"];
-  var i = 0;
-  var len = cars.length;
-  var text = "";
-
-  for (; i < len; ) {
-      text += cars[i] + "<br>";
-      i++;
-    }
-    return text;
-}
