@@ -5,24 +5,18 @@ $(document).ready(function() {
   $('#dr-form').submit(function(event) {
     event.preventDefault();
     const apiKey = require('./../.env').apiKey;
-    const name = $('#name-input').val();
-    const symptom = $('#symptom-input').val();
-    $('#name-input').val("");
-    $('#symptom-input').val("");
+    const search = $('#input').val();
     $('#results').empty();
 
-    const symptomInput = document.getElementById('symptom-input');
-    const nameInput = document.getElementById('name-input');
-
-    if (symptomInput && symptomInput.value){
-      let lookFor = "query";
-    }else if (nameInput && nameInput.value){
-      let lookFor = "last_name";
-    }else{
-      return "Please enter a value.";
+    if (document.getElementById('symptom-check').checked){
+      var lookFor = "query";
+      alert('this is a symptom');
+    }else if (document.getElementById('name-check').checked){
+      var lookFor = "last_name";
+      alert('this is a name');
     }
 
-    getDr(name, lookFor, apiKey, function(response) {
+    getDr(search, lookFor, apiKey, function(response) {
       let length = `${response.meta.count}`;
       $('#results').append(`<h3><small class="text-muted">You received: ${response.meta.count} results.</small></h3><br>`);
       counter(response, length);
