@@ -1,7 +1,9 @@
 # Doctor Lookup
 January 12, 2018. Amy Churchwell.
 
-:hospital: A website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue.
+:hospital:
+
+A website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue.
 
 ## Requirements
 
