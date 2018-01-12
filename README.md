@@ -5,11 +5,9 @@ January 12, 2018. Amy Churchwell.
 
 ## Requirements
 
-Here are the following things your application must do. Read through the list carefully to make sure you add all needed functionality!
-
 A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
 
-A user should be able to to enter a name to receive a list of doctors in the Portland area that fit the search query.
+A user should be able to to enter a name to receive a _list_ of doctors in the Portland area that fit the search query.
 
 If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients (the API provides this data).
 
@@ -23,6 +21,6 @@ If the query response doesn't include any doctors (for instance, if no doctors m
 
 [x] Include .env in .gitignore.
 
-[ ] Use at least two JavaScript files: One to receive form input and another to make an API request and display results.
+[x] Use at least two JavaScript files: One to receive form input and another to make an API request and display results.
 
 [x] This example assumes your API Key is stored in an apiKey variable, as described in this lesson. In order to make your applications quick to grade, please follow the example exactly and do not rename your apiKey variable to something different.
