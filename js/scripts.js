@@ -5,16 +5,32 @@ export function getData(search, apiKey, yes, no){
       data: {
         format: 'json'
       },
-      success: function(response) {
-        yes(response);
-      },
-      error: function() {
+      statusCode: {
+        200: function(response){
+          yes(response);
+        },
+        404: function(response) {
+          alert('404 ERROR');
+        }
+      }, error: function(){
         no();
       }
-      // statusCode: {
-      //   404: function() {
-      //     nothing();
-      //   }
-      // }
     });
+
+    if (search === undefined){
+      alert('THIS THING DOESNT WORK FIX LATER');
+    }
   }
+
+export function counter(){
+  var cars = ["BMW", "Volvo", "Saab", "Ford"];
+  var i = 0;
+  var len = cars.length;
+  var text = "";
+
+  for (; i < len; ) {
+      text += cars[i] + "<br>";
+      i++;
+    }
+    return text;
+}
