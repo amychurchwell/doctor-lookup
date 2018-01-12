@@ -7,7 +7,7 @@ $(document).ready(function() {
     let apiKey = require('./../.env').apiKey;
     $('#name-input').val("");
     getData(name, apiKey, function(response) {
-      $('#results').text(`Your result is ${response.meta.item_type}`);
+      $('#results').text(`Your result is ${response.data[0].practices[0].name}`);
     }, function() {
       $('#results').text("There was an error processing your request. Please try again.");
     });
