@@ -9,9 +9,9 @@ $(document).ready(function() {
     $('#name-input').val("");
     $('#results').empty();
     getData(name, apiKey, function(response) {
+      let length = `${response.meta.count}`;
       $('#results').append(`You received: ${response.meta.count} results.<br>`);
-      counter(response);
-      }
+      counter(response, length);
     }, function() {
       $('#results').text("There was an error processing your request. Please try again.");
     });

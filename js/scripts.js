@@ -18,14 +18,16 @@ export function getData(search, apiKey, yes, no){
     });
   }
 
-export function counter(){
+export function counter(response, input){
   let i;
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < input; i++) {
     $('#results').append(`
+      <li>
       Your result is ${response.data[i].practices[0].name}<br>
       Phone number: ${response.data[i].practices[0].phones[0].number}<br>
       Accepts new patients? ${response.data[0].practices[0].accepts_new_patients}<br>
       Address:<br> ${response.data[i].practices[0].visit_address.street}, Portland, OR.<br>
+      </li>
       `);
     }
   }
