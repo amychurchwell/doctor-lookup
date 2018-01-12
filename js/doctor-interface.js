@@ -10,10 +10,8 @@ $(document).ready(function() {
 
     if (document.getElementById('symptom-check').checked){
       var lookFor = "query";
-      alert('this is a symptom');
     }else if (document.getElementById('name-check').checked){
       var lookFor = "last_name";
-      alert('this is a name');
     }
 
     getDr(search, lookFor, apiKey, function(response) {
