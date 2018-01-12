@@ -1,27 +1,29 @@
-var gulp = require('gulp'),
-browserify = require('browserify'),
-source = require('vinyl-source-stream'),
-concat = require('gulp-concat'),
-uglify = require('gulp-uglify'),
-utilities = require('gulp-util'),
-jshint = require('gulp-jshint'),
-del = require('del'),
-lib = require('bower-files')({
+var gulp = require('gulp');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var utilities = require('gulp-util');
+var del = require('del');
+var jshint = require('gulp-jshint');
+var buildProduction = utilities.env.production;
+
+var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
       "main": [
         "less/bootstrap.less",
         "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
+        "dist/js/boostrap.js"
       ]
     }
   }
-}),
+});
 
-browserSync = require('browser-sync').create(),
-babelify = require("babelify"),
-buildProduction = utilities.env.production;
-
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var babelify = require('babelify');
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js']})
@@ -33,7 +35,7 @@ gulp.task('jsBrowserify', ['concatInterface'], function() {
     .pipe(gulp.dest('./build/js'))
 });
 
-gulp.task('bower', ['bowerJS', 'bowerCSS']);
+gulp.task('bower', ['bowerJS', 'bowerCSS', 'cssBuild']);
 
 gulp.task('bowerJS', function () {
   return gulp.src(lib.ext('js').files)
@@ -59,7 +61,7 @@ gulp.task('build', ['clean'], function(){
 
 gulp.task("cssBuild", function() {
   gulp.src(['css/*.css'])
-  .pipe(concat('vendor.css'))
+  .pipe(concat('styles.css'))
   .pipe(gulp.dest('./build/css'))
 });
 

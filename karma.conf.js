@@ -5,12 +5,13 @@ module.exports = function(config) {
     files: [
       'js/*.js',
       'spec/*-spec.js',
+      'node_modules/moment/min/moment.min.js'
     ],
     exclude: [
     ],
     preprocessors: {
       'js/*.js': [ 'browserify'],
-      'spec/*.js': ['browserify'],
+      'spec/*.js': ['browserify']
     },
     plugins: [
       'karma-jquery',

@@ -8,12 +8,12 @@ $(document).ready(function() {
     $('#name-input').val("");
     $('#results').empty();
     getData(name, apiKey, function(response) {
-      console.log(${response.data}.length);
       $('#results').append(`
+        <img src="${response.data[0].profile[0].image_url}>"
         Your result is ${response.data[0].practices[0].name}<br>
         Phone number: ${response.data[0].practices[0].phones[0].number}<br>
         Accepts new patients? ${response.data[0].practices[0].accepts_new_patients}<br>
-        Address:<br> ${response.data[0].practices[0].visit_address.street}, Portland, OR.
+        Address:<br> ${response.data[0].practices[0].visit_address.street}, Portland, OR.<br>
         `);
     }, function() {
       $('#results').text("There was an error processing your request. Please try again.");
