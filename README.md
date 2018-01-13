@@ -29,19 +29,20 @@ $ bower install
 $ gulp serve
 ```
 
-## Technology
+## Built with
 
 :ok_hand:
 
-Special thanks to [BetterDoctor API](https://developer.betterdoctor.com/) for all of the data.
-
-This project utilizes mostly JavaScript with some ES6 flavor! Whoop.
+* [BetterDoctor API](https://developer.betterdoctor.com/)
+* NPM.
+* Bower.
+* Gulp.
 
 ## Assignment Requirements
 
 _A reference for a forgetful student._
 
-- [  ] A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
+- [x] A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
 
 - [x] A user should be able to to enter a name to receive a list of doctors in the Portland area that fit the search query.
 

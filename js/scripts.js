@@ -35,6 +35,3 @@ export function counter(response, input){
       `);
     }
   }
-
-  //last_name
-  //query
